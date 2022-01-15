@@ -1,0 +1,19 @@
+{
+  "name": "tristanc-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Tristan Carmichael.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esh6597/tristanc-portfolio.git"
+  },
+  "author": "Erin Han",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esh6597/tristanc-portfolio/issues"
+  },
+  "homepage": "https://github.com/esh6597/tristanc-portfolio#readme"
+}
