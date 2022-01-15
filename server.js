@@ -1,59 +1,17 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+//Server via Express
+const express = require('express');
 
-//Serve locally
-const hostname = 'localhost';
-const port = 3000;
+//Define app
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-//Return 404 page in case of error
-const return404 = () => {
-  filePath = path.resolve('./public/404.html');
-  res.statusCode = 404;
-  res.setHeader('Content-Type', 'text/html');
-  fs.createReadStream(filePath).pipe(res);
-}
-
-//Create server for static files
-const server = http.createServer((req, res) => {
-
-  console.log('Request for ' + req.url + ' via method ' + req.method);
-
-  //Only allow GET method; everything else returns 404
-  if (req.method === 'GET') {
-
-    let fileUrl;
-
-    if (req.url == '/' || req.url =='/home') {
-      fileUrl = '/index.html';
-
-    } else fileUrl = req.url;
-    
-    //Find static file in /public
-    let filePath = path.resolve('./public' + fileUrl);
-
-    //Check if file extension exists
-    const fileExt = path.extname(filePath);
-
-    //Should only serve html files
-    if (fileExt == '.html') {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/html');
-      fs.createReadStream(filePath).pipe(res);
-
-    } 
-    else {
-      return404();
-      return;
-    }
-  } 
-  else {
-    return404();
-    return;
-  }
-});
+//Serve static assets in /public
+/**
+ * Note that this doesn't throw an error if the domain isn't found; instead it uses next()
+ */
+app.use(express.static('public'));
 
 //Deploy server
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(PORT, () => {
+  console.log('Server up and running at port ', PORT);
 });

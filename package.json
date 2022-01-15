@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/esh6597/tristanc-portfolio/issues"
   },
-  "homepage": "https://esh6597.github.io/tristanc-portfolio/"
+  "homepage": "https://esh6597.github.io/tristanc-portfolio/",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
