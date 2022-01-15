@@ -11469,6 +11469,14 @@ body {
   letter-spacing: 0.0625em;
 }
 
+/*
+|| THEME
+*/
+
+/*
+|| NAVIGATION
+*/
+
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;
@@ -11553,12 +11561,20 @@ body {
   border: 0;
 }
 
+/*
+|| MASTHEAD
+*/
+
 .masthead {
   position: relative;
   width: 100%;
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
+
+  /*
+  MASTHEAD IMAGE
+  */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11601,6 +11617,10 @@ body {
   }
 }
 
+/*
+|| ABOUT
+*/
+
 .about-section {
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
@@ -11608,6 +11628,10 @@ body {
 .about-section p {
   margin-bottom: 5rem;
 }
+
+/*
+|| PROJECTS
+*/
 
 .projects-section {
   padding: 10rem 0;
@@ -11636,6 +11660,10 @@ body {
   }
 }
 
+/*
+|| SIGNUP
+*/
+
 .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
@@ -11654,6 +11682,10 @@ body {
   letter-spacing: 0.15rem;
   border: 0;
 }
+
+/*
+|| CONTACT
+*/
 
 .contact-section {
   padding-top: 5rem;
@@ -11691,6 +11723,10 @@ body {
 .contact-section .social a:active {
   color: #fff;
 }
+
+/*
+|| FOOTER
+*/
 
 .footer {
   padding: 5rem 0;
