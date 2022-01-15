@@ -4,6 +4,7 @@
   "description": "Portfolio website for Tristan Carmichael.",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,5 @@
   "bugs": {
     "url": "https://github.com/esh6597/tristanc-portfolio/issues"
   },
-  "homepage": "https://github.com/esh6597/tristanc-portfolio#readme"
+  "homepage": "https://esh6597.github.io/tristanc-portfolio/"
 }
