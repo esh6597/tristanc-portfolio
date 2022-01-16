@@ -1,23 +1,34 @@
+/*
+|| NAVIGATION
+*/
+
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #000;
 }
+
 #mainNav .navbar-toggler {
-  font-size: 80%;
+  font-size: 100%;
   padding: 0.75rem;
-  color: #64a19d;
+  color: $primary-light;
   border: none;
+  outline: none;
 }
+
 #mainNav .navbar-toggler:focus {
   outline: none;
 }
+
 #mainNav .navbar-brand {
-  color: #000;
+  color: $primary;
   font-weight: 700;
   padding: 0.9rem 0;
 }
+#mainNav .nav-link {
+  color: $primary-light;
+}
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: fade($primary-light, 80%);
   outline: none;
   background-color: transparent;
 }
@@ -54,26 +65,26 @@
   || SCROLL CHANGE EFFECT
   */
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #000;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000;
+    color: $primary;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    color: $primary-light;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #fff;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #fff;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #fff;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #fff;
   }
 }
 
