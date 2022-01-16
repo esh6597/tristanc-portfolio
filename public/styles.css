@@ -11504,6 +11504,7 @@ body {
   outline: none;
   background-color: transparent;
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
@@ -11527,6 +11528,10 @@ body {
   #mainNav .nav-link:active {
     color: #fff;
   }
+
+  /*
+  || SCROLL CHANGE EFFECT
+  */
   #mainNav.navbar-shrink {
     background-color: #fff;
   }

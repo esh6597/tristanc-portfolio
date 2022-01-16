@@ -1,16 +1,16 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.4 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+/**
+ * Search for || to navigate between sections.
+ */
 
+// || THEME SCRIPTS
+
+//Execute when page loads
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
-    var navbarShrink = function () {
+
+    // || Navbar shrink function
+    var navbarShrink = () => {
+        // Check if component exists
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
@@ -22,21 +22,12 @@ window.addEventListener('DOMContentLoaded', event => {
         }
 
     };
-
-    // Shrink the navbar 
+    // Execute
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -51,4 +42,15 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+
+    // Add Bootstrap ScrollSpy to elements
+
+    // Nav Bar
+    const mainNav = document.body.querySelector('#mainNav');
+    if (mainNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#mainNav',
+            offset: 74,
+        });
+    };
 });
