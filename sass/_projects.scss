@@ -18,8 +18,12 @@
   }
 
   .section-title {
-    margin: 10rem 3rem;
-    padding: 1.5rem;
+
+    h1, .h1 {
+      margin: 10rem 3rem;
+      padding: 1.5rem;
+      background-color: #000;
+    }
   }
 
   .featured-text {
