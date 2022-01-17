@@ -8,7 +8,8 @@
 window.addEventListener('DOMContentLoaded', event => {
 
 
-    // || Navbar shrink function
+    // || NAVBAR
+    // Define shrink function
     var navbarShrink = () => {
         // Check if component exists
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -42,10 +43,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-
-    // Add Bootstrap ScrollSpy to elements
-
-    // Nav Bar
+    // Add Bootstrap ScrollSpy
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
