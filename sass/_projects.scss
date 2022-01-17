@@ -4,32 +4,50 @@
 
 .projects-section {
   padding-bottom: 10rem;
+  background-color: $dark;
+
+  .img {
+    height: 50vh;
+    overflow: hidden;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
 
   .section-title {
     margin: 10rem 3rem;
     padding: 1.5rem;
   }
-}
-.projects-section .featured-text {
-  padding: 2rem;
-}
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid $primary;
+
+  .featured-text {
+    padding: 2rem;
+    color: #fff;
+  }
+
+  .project-text {
+    padding: 3rem;
+    font-size: 90%;
   }
 }
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
+
 @media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
-  .projects-section .project-text hr {
-    border-color: $primary;
-    border-width: 0.25rem;
-    width: 30%;
+  .projects-section {
+    .featured-text {
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid $primary;
+    }
+
+    .project-text {
+      padding: 5rem;
+
+      hr {
+        border-color: $primary;
+        border-width: 0.25rem;
+        width: 30%;
+      }
+    }
   }
 }
