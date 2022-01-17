@@ -10,18 +10,16 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // || NAVBAR
     // Define shrink function
-    var navbarShrink = () => {
+    let navbarShrink = () => {
         // Check if component exists
         const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
+        if (navbarCollapsible) {
+            if (window.scrollY === 0) {
+                navbarCollapsible.classList.remove('navbar-shrink')
+            } else {
+                navbarCollapsible.classList.add('navbar-shrink')
+            }
         }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
     };
     // Execute
     navbarShrink();
@@ -51,4 +49,31 @@ window.addEventListener('DOMContentLoaded', event => {
             offset: 74,
         });
     };
+
+
+    // || MASTHEAD
+    const masthead = document.querySelector('.masthead');
+    const mastImg = document.querySelector('#masthead-image');
+
+    mastImg.style.transform = 'scale(1.25)';
+    mastImg.style.transform = `scale(1.5) translate(0, -10%)`;
+
+    const moveToMouse = (event) => {
+        console.log(`Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`);
+        let moveX = ((window.innerWidth / 2) - event.clientX) / 3;
+        let moveY = ((window.innerHeight / 2) - event.clientY) / 3;
+        mastImg.style.transform = `scale(1.5, 1.5) translate(${moveX}px, ${moveY}px)`;
+    };
+
+    const moveOn = () => {
+        masthead.addEventListener('mousemove', moveToMouse);
+    };
+
+    const moveOff = () => {
+        masthead.removeEventListener('mousemove', moveToMouse);
+        mastImg.style.transform = 'none';
+    };  
+
+    masthead.addEventListener('mouseenter', moveOn);
+    masthead.addEventListener('mouseleave', moveOff);
 });

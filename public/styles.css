@@ -11251,10 +11251,13 @@ textarea.form-control-lg {
   position: relative;
   padding-top: 50vh;
 }
-.masthead .masthead-image {
+.masthead #masthead-image {
   position: absolute;
-  object-fit: cover;
   z-index: -1;
+  transition: transform 5s ease-out;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
 .masthead .btn {
   color: #fff;
