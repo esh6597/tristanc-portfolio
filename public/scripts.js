@@ -52,12 +52,15 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // || MASTHEAD
+    // Use masthead as event parameters to control image
     const masthead = document.querySelector('.masthead');
     const mastImg = document.querySelector('#masthead-image');
 
+    // Animation upon page load
     mastImg.style.transform = 'scale(1.25)';
     mastImg.style.transform = `scale(1.5) translate(0, -10%)`;
 
+    // Moves image based on mouse position when hovered
     const moveToMouse = (event) => {
         console.log(`Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`);
         let moveX = ((window.innerWidth / 2) - event.clientX) / 3;
@@ -65,6 +68,7 @@ window.addEventListener('DOMContentLoaded', event => {
         mastImg.style.transform = `scale(1.5, 1.5) translate(${moveX}px, ${moveY}px)`;
     };
 
+    // Add and remove event listener when not hovering on
     const moveOn = () => {
         masthead.addEventListener('mousemove', moveToMouse);
     };
