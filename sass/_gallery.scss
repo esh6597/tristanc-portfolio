@@ -1,0 +1,22 @@
+.gallery-section {
+  background-color: black;
+
+  .gallery-card {
+    border: none;
+    overflow: none;
+
+    .card-img-top {
+      border-radius: 0px;
+    }
+
+    .card-body {
+      background: none;
+  
+      .card-subtitle {
+        color: white;
+        opacity: 0.4;
+        text-align: center;
+      }
+    }
+  }
+}

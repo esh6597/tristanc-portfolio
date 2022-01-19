@@ -11301,7 +11301,7 @@ textarea.form-control-lg {
   min-height: 35rem;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.2) 50%, #000 100%);
+  background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.3) 50%, #000 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11326,11 +11326,8 @@ textarea.form-control-lg {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  color: rgba(255, 255, 255, 0.3);
-}
-.masthead-gallery h2, .masthead-gallery .h2 {
-  max-width: 20rem;
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 10vh;
 }
 
 @media (min-width: 768px) {
@@ -11349,11 +11346,26 @@ textarea.form-control-lg {
     line-height: 4rem;
     letter-spacing: 0.3rem;
   }
-  .masthead-gallery h2, .masthead-gallery .h2 {
-    max-width: 30rem;
-    font-size: 1.25rem;
-  }
 }
+.gallery-section {
+  background-color: black;
+}
+.gallery-section .gallery-card {
+  border: none;
+  overflow: none;
+}
+.gallery-section .gallery-card .card-img-top {
+  border-radius: 0px;
+}
+.gallery-section .gallery-card .card-body {
+  background: none;
+}
+.gallery-section .gallery-card .card-body .card-subtitle {
+  color: white;
+  opacity: 0.4;
+  text-align: center;
+}
+
 /*
 || ABOUT
 */
