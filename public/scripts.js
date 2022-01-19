@@ -53,8 +53,17 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // || MASTHEAD
     // Use masthead as event parameters to control image
-    const masthead = document.querySelector('.masthead');
+    const isHome = document.querySelector('.masthead');
+    const isGallery = document.querySelector('.masthead-gallery');
     const mastImg = document.querySelector('#masthead-image');
+    let masthead;
+
+    //Checks what page it is
+    if (isHome) {
+        masthead = isHome;
+    } else if (isGallery) {
+        masthead = isGallery;
+    }
 
     // Animation upon page load
     mastImg.style.transform = 'scale(1.25)';
