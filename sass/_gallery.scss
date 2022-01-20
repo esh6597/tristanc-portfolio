@@ -1,9 +1,11 @@
 .gallery-section {
   background-color: black;
+  padding-top: 15vh;
 
   .gallery-card {
     border: none;
     overflow: none;
+    padding: 1vw;
 
     .card-img-top {
       border-radius: 0px;
@@ -16,6 +18,17 @@
         color: white;
         opacity: 0.4;
         text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery-section {
+    .gallery-card {
+      .card-img-top {
+        max-height: 50vh;
+        object-fit: cover;
       }
     }
   }
