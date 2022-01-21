@@ -8,12 +8,16 @@ $danger: #a16468;
 $light: #f8f9fa;
 $dark: #1f1f1f;
 
-$font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-sans-serif: "Arima Madurai";
 $font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-$body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+$body-font-family: "IBM Plex Serif";
+$body-font-flavor: "Arima Madurai";
 $body-font-size: 1rem;
-$body-font-weight: 400;
+$body-font-weight: 300;
 $body-line-height: 1.5;
 $body-color: #212529;
 $body-bg: #fff;
+
+$title-font: "Yeseva One", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+$title-font-alt: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;

@@ -6,7 +6,13 @@
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, $primary 75%, $primary-light 100%);
 
+  h2, .h2 {
+    font-family: $title-font-alt;
+  }
+
   p {
+    font-family: $body-font-family;
+    font-weight: 300;
     margin-bottom: 5rem;
   }
 }

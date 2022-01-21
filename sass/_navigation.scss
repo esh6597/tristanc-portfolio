@@ -22,12 +22,19 @@
 
   .navbar-brand {
     color: $primary;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.9rem 0;
+    font-family: $title-font;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
   }
 
   .nav-link {
     color: $primary-light;
+    font-family: $body-font-family;
+    font-size: 80%;
+    letter-spacing: 1px;
+    font-weight: 400;
   }
 
   .navbar-nav {

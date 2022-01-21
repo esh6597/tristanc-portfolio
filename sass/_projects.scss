@@ -4,7 +4,7 @@
 
 .projects-section {
   padding-bottom: 10rem;
-  background-color: black;
+  background-color: $dark;
 
   .img {
     height: 50vh;
@@ -20,9 +20,9 @@
   .section-title {
 
     h1, .h1 {
+      font-family: $title-font;
       margin: 10rem 3rem;
       padding: 1.5rem;
-      background-color: #000;
     }
   }
 
