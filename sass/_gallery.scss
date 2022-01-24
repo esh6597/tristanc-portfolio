@@ -2,6 +2,11 @@
   background-color: black;
   padding-top: 15vh;
 
+  .opacity-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
   .gallery-card {
     border: none;
     overflow: none;

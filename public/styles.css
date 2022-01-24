@@ -11364,6 +11364,10 @@ textarea.form-control-lg {
   background-color: black;
   padding-top: 15vh;
 }
+.gallery-section .opacity-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 .gallery-section .gallery-card {
   border: none;
   overflow: none;

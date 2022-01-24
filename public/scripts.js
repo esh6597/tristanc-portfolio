@@ -8,7 +8,7 @@
 window.addEventListener('DOMContentLoaded', event => {
 
 
-    // || NAVBAR
+    // || NAVBAR ANIMATIONS
     // Define shrink function
     let navbarShrink = () => {
         // Check if component exists
@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
 
-    // || MASTHEAD
+    // || MASTHEAD SCROLL TO MOUSE
     // Use masthead as event parameters to control image
     const isHome = document.querySelector('.masthead');
     const isGallery = document.querySelector('.masthead-gallery');
@@ -97,4 +97,11 @@ window.addEventListener('DOMContentLoaded', event => {
 
     masthead.addEventListener('mouseenter', moveOn);
     masthead.addEventListener('mouseleave', moveOff);
+
+
+    // || GALLERY FADE ANIM
+    const gallery = document.querySelector('.opacity-in');
+    if (gallery) {
+        gallery.style.opacity = 1;
+    }
 });
