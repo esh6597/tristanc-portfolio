@@ -57,25 +57,33 @@ window.addEventListener('DOMContentLoaded', event => {
     const isGallery = document.querySelector('.masthead-gallery');
     const mastImg = document.querySelector('#masthead-image');
     let masthead;
-
-    //Checks what page it is
-    if (isHome) {
-        masthead = isHome;
-    } else if (isGallery) {
-        masthead = isGallery;
-    }
+    let moveToMouse;
 
     // Animation upon page load
     mastImg.style.transform = 'scale(1.25)';
     mastImg.style.transform = `scale(1.5) translate(0, -10%)`;
 
-    // Moves image based on mouse position when hovered
-    const moveToMouse = (event) => {
-        console.log(`Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`);
-        let moveX = ((window.innerWidth / 2) - event.clientX) / 3;
-        let moveY = ((window.innerHeight / 2) - event.clientY) / 3;
-        mastImg.style.transform = `scale(1.5, 1.5) translate(${moveX}px, ${moveY}px)`;
-    };
+    //Checks what page it is and changes mouse movement in accordance
+    //Right now there's no difference; keeping here in case there may be in the future
+    if (isHome) {
+        masthead = isHome;
+
+        moveToMouse = (event) => {
+            let moveX = ((window.innerWidth / 2) - event.clientX) / 3;
+            let moveY = ((window.innerHeight / 2) - event.clientY) / 3;
+            mastImg.style.transform = `scale(1.5, 1.5) translate(${moveX}px, ${moveY}px)`;
+        };
+
+    } else if (isGallery) {
+        masthead = isGallery;
+
+        moveToMouse = (event) => {
+            let moveX = ((window.innerWidth / 2) - event.clientX) / 3;
+            let moveY = ((window.innerHeight / 2) - event.clientY) / 3;
+            mastImg.style.transform = `scale(1.5, 1.5) translate(${moveX}px, ${moveY}px)`;
+        };
+
+    }
 
     // Add and remove event listener when not hovering on
     const moveOn = () => {

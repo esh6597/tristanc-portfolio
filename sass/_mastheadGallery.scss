@@ -31,6 +31,7 @@
     object-fit: cover;
     width: 100vw;
     height: 75vh;
+    object-position: 50% 75%;
   }
 
   h1, .h1 {
@@ -38,7 +39,8 @@
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.7);
+    text-shadow: 0px 1rem 1rem black;
     padding-top: 10vh;
   }
 }
