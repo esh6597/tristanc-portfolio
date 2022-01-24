@@ -1,19 +1,77 @@
 /*
+|| FORM
+*/
+
+.signup-section {
+  padding: 10rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("images/roscoe-break.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+  h2, .h2 {
+    text-shadow: 0px 1rem 1rem black;
+  }
+
+  .form-signup input {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    height: auto;
+    font-family: $body-font-family;
+    font-size: 80%;
+    letter-spacing: 0.15rem;
+    border: 0;
+  }
+}
+
+/*
 || CONTACT
 */
 
 .contact-section {
   padding-top: 5rem;
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .card {
     border: 0;
     border-bottom: 0.25rem solid $primary;
     margin-top: 5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: white;
+    }
+    
+    .card-body {
+      padding: 1rem 2.5rem;
+    }
 
     h4, .h4 {
       font-size: 0.8rem;
-      font-family: $title-font;
+      font-family: $title-font-alt;
+      color: black;
+      font-weight: 600;
       letter-spacing: 0.15rem;
+    }
+
+    p {
+      font-family: $body-font-family;
+      color: black;
+      
+      svg {
+        color: $primary;
+      }
+    }
+
+    a {
+      font-family: $body-font-family;
+      color: $primary;
     }
 
     hr {
@@ -25,6 +83,8 @@
 
   .social-text {
     margin-top: 10rem;
+    font-family: $body-font-family;
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .social {

@@ -11139,6 +11139,7 @@ textarea.form-control-lg {
 
 .footer {
   padding: 5rem 0;
+  font-family: "IBM Plex Serif";
 }
 
 /*
@@ -11169,7 +11170,7 @@ textarea.form-control-lg {
 }
 #mainNav .nav-link {
   color: #c1ceab;
-  font-family: "IBM Plex Serif";
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
   font-size: 80%;
   letter-spacing: 1px;
   font-weight: 400;
@@ -11276,7 +11277,7 @@ textarea.form-control-lg {
 .masthead h2, .masthead .h2 {
   max-width: 20rem;
   font-size: 1rem;
-  font-family: "IBM Plex Serif";
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
   font-weight: 300;
 }
 
@@ -11406,28 +11407,64 @@ textarea.form-control-lg {
 .projects-section {
   padding-bottom: 10rem;
   background-color: #1f1f1f;
+  box-shadow: inset 0px 0px 3rem 0 black !important;
 }
-.projects-section .img {
+.projects-section .featured {
+  margin-bottom: 10rem;
+}
+.projects-section .image-featured {
   height: 50vh;
-  overflow: hidden;
+  box-shadow: 0px 0px 3rem 0 black !important;
 }
-.projects-section .img img {
-  min-width: 100%;
-  min-height: 100%;
+.projects-section .image-featured .img-fluid {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: 30% 40%;
+}
+.projects-section .image {
+  height: 40vh;
+}
+.projects-section .image .img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 40%;
 }
 .projects-section .section-title h1, .projects-section .section-title .h1 {
   font-family: "Yeseva One", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
-  margin: 10rem 3rem;
+  margin: 5rem 0rem;
   padding: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0px 1rem 1rem black;
 }
 .projects-section .featured-text {
   padding: 2rem;
   color: #fff;
+  line-height: 2rem;
+}
+.projects-section .featured-text h4, .projects-section .featured-text .h4 {
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+.projects-section .featured-text p {
+  font-family: "IBM Plex Serif";
+}
+.projects-section .project-row {
+  box-shadow: 0px 0px 2.5rem 0 black !important;
 }
 .projects-section .project-text {
   padding: 3rem;
   font-size: 90%;
+}
+.projects-section .project-text h4, .projects-section .project-text .h4 {
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+.projects-section .project-text p {
+  font-family: "IBM Plex Serif";
 }
 
 @media (min-width: 992px) {
@@ -11436,7 +11473,7 @@ textarea.form-control-lg {
     border-left: 0.5rem solid #6c765b;
   }
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 3rem;
   }
   .projects-section .project-text hr {
     border-color: #6c765b;
@@ -11445,7 +11482,7 @@ textarea.form-control-lg {
   }
 }
 /*
-|| SIGNUP
+|| FORM
 */
 .signup-section {
   padding: 10rem 0;
@@ -11455,13 +11492,15 @@ textarea.form-control-lg {
   background-attachment: scroll;
   background-size: cover;
 }
+.signup-section h2, .signup-section .h2 {
+  text-shadow: 0px 1rem 1rem black;
+}
 .signup-section .form-signup input {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
-  font-family: "Yeseva One", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  font-family: "IBM Plex Serif";
   font-size: 80%;
-  text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
 }
@@ -11472,15 +11511,40 @@ textarea.form-control-lg {
 .contact-section {
   padding-top: 5rem;
 }
+.contact-section a {
+  text-decoration: none;
+  color: black;
+}
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #6c765b;
   margin-top: 5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease-in-out;
+}
+.contact-section .card:hover {
+  background-color: white;
+}
+.contact-section .card .card-body {
+  padding: 1rem 2.5rem;
 }
 .contact-section .card h4, .contact-section .card .h4 {
   font-size: 0.8rem;
-  font-family: "Yeseva One", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  color: black;
+  font-weight: 600;
   letter-spacing: 0.15rem;
+}
+.contact-section .card p {
+  font-family: "IBM Plex Serif";
+  color: black;
+}
+.contact-section .card p svg {
+  color: #6c765b;
+}
+.contact-section .card a {
+  font-family: "IBM Plex Serif";
+  color: #6c765b;
 }
 .contact-section .card hr {
   border-color: #6c765b;
@@ -11489,6 +11553,8 @@ textarea.form-control-lg {
 }
 .contact-section .social-text {
   margin-top: 10rem;
+  font-family: "IBM Plex Serif";
+  color: rgba(255, 255, 255, 0.8);
 }
 .contact-section .social a {
   text-align: center;
