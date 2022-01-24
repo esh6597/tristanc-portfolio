@@ -20,7 +20,8 @@
   "homepage": "https://esh6597.github.io/tristanc-portfolio/",
   "dependencies": {
     "bootstrap": "^5.1.3",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "sass": "^1.48.0"

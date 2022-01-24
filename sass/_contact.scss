@@ -12,6 +12,7 @@
 
   h2, .h2 {
     text-shadow: 0px 1rem 1rem black;
+    font-family: $title-font-alt;
   }
 
   .form-signup input {
@@ -22,6 +23,24 @@
     font-size: 80%;
     letter-spacing: 0.15rem;
     border: 0;
+  }
+
+  #contactForm {
+
+    font-family: $body-font-family;
+    color:rgba(255, 255, 255, 0.8);
+    text-align: left;
+    font-weight: 500;
+
+    input, textarea {
+      font-family: $title-font-alt;
+      color: rgba(0,0,0,0.5);
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      margin-bottom: 2rem;
+    }
   }
 }
 

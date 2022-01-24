@@ -11551,6 +11551,7 @@ textarea.form-control-lg {
 }
 .signup-section h2, .signup-section .h2 {
   text-shadow: 0px 1rem 1rem black;
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
 }
 .signup-section .form-signup input {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -11560,6 +11561,20 @@ textarea.form-control-lg {
   font-size: 80%;
   letter-spacing: 0.15rem;
   border: 0;
+}
+.signup-section #contactForm {
+  font-family: "IBM Plex Serif";
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  font-weight: 500;
+}
+.signup-section #contactForm input, .signup-section #contactForm textarea {
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+.signup-section #contactForm textarea {
+  margin-bottom: 2rem;
 }
 
 /*
