@@ -104,4 +104,7 @@ window.addEventListener('DOMContentLoaded', event => {
     if (gallery) {
         gallery.style.opacity = 1;
     }
+
+
+    // || GALLERY MODALS
 });
