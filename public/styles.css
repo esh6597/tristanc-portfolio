@@ -11379,6 +11379,8 @@ textarea.form-control-lg {
   color: white;
   opacity: 0.4;
   text-align: center;
+  font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  padding: 1rem 0 2rem 0;
 }
 
 @media (max-width: 1200px) {
