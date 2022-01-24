@@ -11331,7 +11331,7 @@ textarea.form-control-lg {
   object-fit: cover;
   width: 100vw;
   height: 75vh;
-  object-position: 50% 75%;
+  object-position: 50% 70%;
 }
 .masthead-gallery h1, .masthead-gallery .h1 {
   font-family: "Yeseva One", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
@@ -11362,7 +11362,14 @@ textarea.form-control-lg {
 }
 .gallery-section {
   background-color: black;
-  padding-top: 15vh;
+}
+.gallery-section .hint {
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+.gallery-section .hint p {
+  font-family: "IBM Plex Serif";
+  color: rgba(255, 255, 255, 0.5);
 }
 .gallery-section .opacity-in {
   opacity: 0;
@@ -11385,6 +11392,9 @@ textarea.form-control-lg {
   text-align: center;
   font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
   padding: 1rem 0 2rem 0;
+}
+.gallery-section .gallery-card:hover {
+  cursor: zoom-in;
 }
 
 @media (max-width: 1200px) {
@@ -11411,22 +11421,25 @@ textarea.form-control-lg {
   right: 1rem;
   color: rgba(255, 255, 255, 0.8);
 }
-.gallery-zoom #slideshow {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.gallery-zoom .exit:hover {
+  cursor: pointer;
 }
-.gallery-zoom #slideshow .carousel-item {
-  position: relative;
-  width: 90vw;
+.gallery-zoom .carousel-inner {
   height: 100vh;
 }
-.gallery-zoom #slideshow .carousel-item img {
-  margin-top: 5vh;
-  position: absolute;
-  width: 90vw;
-  height: 90vh;
-  object-fit: contain;
+.gallery-zoom .carousel-item {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.gallery-zoom img {
+  display: block;
+  margin: 5vh auto;
+  max-height: 90vh;
+  max-width: 90vw;
+}
+.gallery-zoom .carousel-indicators [data-bs-target] {
+  width: 20px;
 }
 
 /*

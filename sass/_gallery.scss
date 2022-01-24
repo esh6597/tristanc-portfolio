@@ -1,6 +1,15 @@
 .gallery-section {
   background-color: black;
-  padding-top: 15vh;
+
+  .hint {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+
+    p {
+      font-family: $body-font-family;
+      color: rgba(255,255,255,0.5);
+    }
+  }
 
   .opacity-in {
     opacity: 0;
@@ -26,6 +35,10 @@
         font-family: $title-font-alt;
         padding: 1rem 0 2rem 0;
       }
+    }
+
+    &:hover {
+      cursor: zoom-in;
     }
   }
 }

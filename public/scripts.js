@@ -126,3 +126,11 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 });
+
+$(function() {
+    $('.carousel').each(function(){
+        $(this).carousel({
+            interval: false
+        });
+    });
+});
