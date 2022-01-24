@@ -107,4 +107,22 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // || GALLERY MODALS
+    const zoomView = document.querySelector('.gallery-zoom');
+    const slideshow = document.querySelector('.carousel');
+
+    if (zoomView && slideshow) {
+
+        const galleryCards = document.querySelectorAll('.gallery-card');
+        galleryCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                zoomView.style.display = 'block';
+                document.querySelector(`#b-${card.id}`).click();
+            });
+        });
+
+        const exit = document.querySelector('.exit');
+        exit.addEventListener('click', () => {
+            zoomView.style.display = 'none';
+        });
+    }
 });

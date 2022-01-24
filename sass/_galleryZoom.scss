@@ -7,6 +7,15 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.7);
+  display: block;
+
+  .exit {
+    position: absolute;
+    z-index: 2001;
+    top: 1rem;
+    right: 1rem;
+    color: rgba(255,255,255,0.8);
+  }
 
   #slideshow {
     position: relative;
