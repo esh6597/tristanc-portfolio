@@ -5,6 +5,7 @@
 // || THEME SCRIPTS
 
 //Execute when page loads
+//This function is pure JavaScript; all code either came with the default theme, or breaks upon conversion to jQuery.
 window.addEventListener('DOMContentLoaded', event => {
 
 
@@ -127,10 +128,38 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 });
 
+// || PREVENT AUTOSCROLL
 $(function() {
     $('.carousel').each(function(){
         $(this).carousel({
             interval: false
         });
     });
+});
+
+// || FORM SUBMISSION
+$('#contactForm').on('submit', (event) => {
+    event.preventDefault();
+
+    const firstName = $('#firstName').val().trim();
+    const lastName = $('#lastName').val().trim();
+    const email = $('#email').val().trim();
+    const phone = $('#phone').val().trim();
+    const message = $('#message').val().trim();
+
+    const data = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        message
+    };
+
+    console.log(`Posting to server: ${firstName} ${lastName}, ${email}, ${phone}, Message: ${message}`);    
+
+    $.post('/email', data, function() {
+        
+    });
+
+    $('#contactForm')[0].reset();
 });

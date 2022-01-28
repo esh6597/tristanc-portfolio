@@ -8,23 +8,16 @@ const router = express.Router();
 
 app.use(express.static('public'));
 
+app.use(express.urlencoded({
+  extend: false
+}));
+app.use(express.json());
+
 //Basic routing
-router.route('/email')
-.get((req, res, next) => {
-  res.statusCode = 403;
-  res.end('GET operation not allowed!');
-})
-.post((req, res, next) => {
-  res.statusCode = 403;
-  res.end('POST operation not allowed!');
-})
-.put((req, res, next) => {
-  res.statusCode = 403;
-  res.end('PUT operation not allowed!');
-})
-.delete((req, res, next) => {
-  res.statusCode = 403;
-  res.end('DELETE operation not allowed!');
+app.post('/email', (req, res) => {
+  //Send email
+  console.log('Data: ', req.body);
+  res.json({message: 'Data received'});
 });
 
 //Deploy server
