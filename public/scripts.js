@@ -145,6 +145,7 @@ $('#contactForm').on('submit', (event) => {
     const lastName = $('#lastName').val().trim();
     const email = $('#email').val().trim();
     const phone = $('#phone').val().trim();
+    const subject = $('#subject').val().trim();
     const message = $('#message').val().trim();
 
     const data = {
@@ -152,14 +153,15 @@ $('#contactForm').on('submit', (event) => {
         lastName,
         email,
         phone,
+        subject,
         message
     };
 
-    console.log(`Posting to server: ${firstName} ${lastName}, ${email}, ${phone}, Message: ${message}`);    
+    console.log(`Thanks for your submission! Here's what you wrote: ${firstName} ${lastName}, ${email}, ${phone}, Subject: ${subject}, Message: ${message}`);    
 
     $.post('/email', data, function() {
-        
+        console.log('Sending all this data to server...');
     });
 
-    $('#contactForm')[0].reset();
+    //$('#contactForm')[0].reset();
 });
