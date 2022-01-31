@@ -1,12 +1,12 @@
 # About
 
-This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites.
+This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites. Still a work in progress, but I wanted to show some code I've been using for freelance purposes.
 
 #### General Workflow
 - Scaffold Express file structure and add dependencies
 - Unzip template into public folder and organize files in public folder
 - Migrate CSS into Sass modules for easier editing + organization + variables
-- Remember to update import paths
+- Remember to update import paths and package scripts
 - Type away! No compilation as front end is static.
 
 While there's no 7-1 structure for the Sass files in this project, the modules are separated in a similar structure without excessive directories.
