@@ -39,7 +39,7 @@ Expect these features to be pushed within the next week:
 
 # Licenses and Copyright
 
-All artwork copyright 2022 Tristan Carmichael
+All artwork belongs to Tristan Carmichael and cannot be reused for any purpose if using this repository as a code template.
 Code copyright 2022 Erin Han
 
 The code for this website is licensed under MIT, as it utilizes a theme from Start Bootstrap with some heavy edits for deployment and client needs:

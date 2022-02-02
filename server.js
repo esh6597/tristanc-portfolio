@@ -1,9 +1,23 @@
+//Import LowDB; purely for email tracking
+import { join, dirname } from 'path';
+import { Low, JSONFile } from 'lowdb';
+
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+//Use JSON file for storage
+const file = join(__dirname, 'db.json');
+const adapter = new JSONFile(file);
+const db = new Low(adapter);
+
 //Import API key and email recipient
-//Sorry, don't know why I chose this var name.
-const mailTypes = require('./mail');
+//Because mailTypes contains sensitive information such as API keys, it is not included in this repository.
+import { key, recipient } from './mail.js';
+// const mailTypes = require('./mail');
 
 //Server via Express
-const express = require('express');
+import express from 'express';
+// const express = require('express');
 
 //Define app
 const app = express();
@@ -11,15 +25,16 @@ const PORT = process.env.PORT || 3000;
 
 
 //Define + config mailing capabilities
-const nodemailer = require('nodemailer');
-const mailService = require('sib-api-v3-sdk');
+import mailService from 'sib-api-v3-sdk';
+// const mailService = require('sib-api-v3-sdk');
 
 let defaultClient = mailService.ApiClient.instance;
 let apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = mailTypes.apiKey;
+apiKey.apiKey = key;
 
 let apiInstance = new mailService.TransactionalEmailsApi();
 
+//Define mail protocol
 let sendMail = (firstName, 
   lastName, 
   email, 
@@ -36,7 +51,7 @@ let sendMail = (firstName,
 
   sendSmtp.sender = {'name': fullName, 'email': email};
   sendSmtp.replyTo = {'name': fullName, 'email': email};
-  sendSmtp.to = [mailTypes.recipient];
+  sendSmtp.to = [recipient];
   sendSmtp.subject = subject;
   sendSmtp.htmlContent = fullHTML;
 
@@ -61,7 +76,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 
-//Basic routing
+//Email Routing
 app.post('/email', (req, res) => {
   const { firstName, lastName, email, phone, subject, message } = req.body;  
   res.json({message: 'Data received'});

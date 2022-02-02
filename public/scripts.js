@@ -5,7 +5,7 @@
 // || THEME SCRIPTS
 
 //Execute when page loads
-//This function is pure JavaScript; all code either came with the default theme, or breaks upon conversion to jQuery.
+//This function is pure JavaScript; all code either came with the default theme, or breaks upon conversion to jQuery. jQuery code can be found below.
 window.addEventListener('DOMContentLoaded', event => {
 
 
@@ -113,6 +113,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     if (zoomView && slideshow) {
 
+        //Clicking on gallery cards scrolls carousel to relevant image
         const galleryCards = document.querySelectorAll('.gallery-card');
         galleryCards.forEach((card) => {
             card.addEventListener('click', () => {
@@ -121,6 +122,7 @@ window.addEventListener('DOMContentLoaded', event => {
             });
         });
 
+        //Close carousel overlay
         const exit = document.querySelector('.exit');
         exit.addEventListener('click', () => {
             zoomView.style.display = 'none';
@@ -129,6 +131,8 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 // || PREVENT AUTOSCROLL
+
+//Begin jQuery
 $(function() {
     $('.carousel').each(function(){
         $(this).carousel({
@@ -160,8 +164,8 @@ $('#contactForm').on('submit', (event) => {
     console.log(`Thanks for your submission! Here's what you wrote: ${firstName} ${lastName}, ${email}, ${phone}, Subject: ${subject}, Message: ${message}`);    
 
     $.post('/email', data, function() {
-        console.log('Sending all this data to server...');
+        console.log('Data sent to server!');
     });
 
-    //$('#contactForm')[0].reset();
+    $('#contactForm')[0].reset();
 });
