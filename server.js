@@ -64,7 +64,9 @@ const sendMail = async (firstName,
   if (db.data.emails < db.data.cutoff) {
     //Format data into email content
     const fullName = firstName + ' ' + lastName;
-    const fullHTML = '<p>' + message + "</p><br /><br /><p>Sent by Node Mailer and MailGun | Contact this email's sender at " + phone + "<br />Email " + (db.data.emails + 1) + " out of 300 today";
+    
+    //See test.html to see fully formatted version
+    const fullHTML = '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body><p>This is an automated email from tristan-carmichael.org. For assistance or to stop these emails, please contact Erin Han.</p><h2>' + subject + '</h2><br /><p>Sent from:</p><p><strong>' + fullName + '</strong><br />Email: ' + email + '<br />Phone Number: ' + phone + '</p><br /><p>' + message + '</p><br /><p>Simply reply to this email to respond!<br /><br />Powered by NodeMailer and SendinBlue<br />Email ' + (db.data.emails + 1) + ' out of 300; resets every 24 hours.</p></body></html>';
 
     let sendSmtp = new mailService.SendSmtpEmail();
 
