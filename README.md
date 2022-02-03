@@ -28,12 +28,16 @@ Despite using a template for fast workflow, many major changes were made for cli
 - Masthead animations on page load and hover
 - Custom fonts
 
+#### Additional Features
+These are some other things I've added alongside front end styling:
+
+- Email limits to conform to API service standards via LowDB (minor database for cross-user tracking)
+- HTML email formatting to look a bit better
+
 #### Features Under Development
 Expect these features to be pushed within the next week:
 
 - Form validation
-- Email limits to conform to API service standards
-- Better HTML email formatting
 - Official deployment
 - Responsive images for mobile and tablet
 
