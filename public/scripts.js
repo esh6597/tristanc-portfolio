@@ -131,6 +131,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 // || PREVENT AUTOSCROLL
+// Must be in jQuery to work.
 
 //Begin jQuery
 $(function() {
@@ -140,4 +141,3 @@ $(function() {
         });
     });
 });
-
