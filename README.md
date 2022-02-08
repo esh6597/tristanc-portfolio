@@ -1,6 +1,6 @@
 # About
 
-This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites. Still a work in progress, but I wanted to show some code I've been using for freelance purposes.
+This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites. Still a work in progress, but I wanted to show some code I've been using for freelance purposes. Special thanks to Tristan Carmichael for being supportive in the work on his project.
 
 #### General Workflow
 - Scaffold Express file structure and add dependencies
@@ -24,13 +24,13 @@ Despite using a template for fast workflow, many major changes were made for cli
 - Style organization via modules
 - Extra gallery page with dynamic carousel zoom overlay
 - Custom card styles and sections
-- Contact form that sends user emails to site owner via transactional email API
 - Masthead animations on page load and hover
 - Custom fonts
 
 #### Additional Features
 These are some other things I've added alongside front end styling:
 
+- Transactional email API for contacting owner via SendinBlue
 - Email limits to conform to API service standards via LowDB (minor database for cross-user tracking)
 - HTML email formatting to look a bit better
 
