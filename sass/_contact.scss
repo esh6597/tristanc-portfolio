@@ -32,10 +32,15 @@
     color:rgba(255, 255, 255, 0.8);
     text-align: left;
     background-color: rgba(0,0,0,0);
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    padding: 2rem;
+
+    border-radius: 1rem; 
     
-    &:focus-visible {
-      background-color: rgba(0,0,0,0.5);
+    &:focus-within {
+      background-color: rgba(0,0,0,0.8);
+      box-shadow: 0px 0px 3rem #000000;
     }
 
     input, textarea {
@@ -48,13 +53,17 @@
       font-weight: 580;
     }
 
+    .form-check-label, #submitBut {
+      margin-top: 2rem;
+    }
+
     .feedback {
       font-size: 80%;
       margin-top: 0.5rem;
     }
 
     .valid {
-      color: $primary-light;
+      color: $primary;
     }
 
     .invalid {
@@ -79,7 +88,6 @@
   .card {
     border: 0;
     border-bottom: 0.25rem solid $primary;
-    margin-top: 5rem;
     background-color: rgba(255, 255, 255, 0.8);
     transition: background-color 0.3s ease-in-out;
 

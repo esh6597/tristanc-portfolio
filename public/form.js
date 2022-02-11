@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', event => {
   const subjectInp = document.querySelector('#subject');
   const messageInp = document.querySelector('#message');
   const checkbox = document.querySelector('#privacyCheck');
-  const submitBut = document.querySelector('#submitBut');
+  const submitBut = document.querySelector('#submitBut');  
 
   //Disable submission automatically
   submitBut.disabled = true;
