@@ -1,4 +1,15 @@
 // || FORM VALIDATION
+
+//State variables for if form is valid
+let firstNVal = false;
+let lastNVal = false;
+let emailVal = false;
+let phoneVal = false;
+let subjectVal = false;
+let messageVal = false;
+let checkVal = false;
+let formVal = false;
+
 window.addEventListener('DOMContentLoaded', event => {
   const form = document.querySelector('#contactForm');
   const firstNInp = document.querySelector('#firstName');
@@ -8,10 +19,11 @@ window.addEventListener('DOMContentLoaded', event => {
   const subjectInp = document.querySelector('#subject');
   const messageInp = document.querySelector('#message');
   const checkbox = document.querySelector('#privacyCheck');
-  const submitBut = document.querySelector('#submitBut');  
+  const submitBut = document.querySelector('#submitBut');
 
-  //Disable submission automatically
+  //Disable submission automatically and erase any messages
   submitBut.disabled = true;
+  const submitFeedback = document.querySelector('#submitFeedback');
 
   // VALIDATOR FX'S--reuseable
   // HTML has its own validation API, but custom JS validation offers better freedom and code organization. To allow special characters in names, we will not be validating names beyond the no angle bracket rule.
@@ -57,16 +69,6 @@ window.addEventListener('DOMContentLoaded', event => {
   };
 
   // ASSIGN CHANGES UPON INPUT
-
-  //State variables for if form is valid
-  let firstNVal = false;
-  let lastNVal = false;
-  let emailVal = false;
-  let phoneVal = false;
-  let subjectVal = false;
-  let messageVal = false;
-  let checkVal = false;
-  let formVal = false;
 
   firstNInp.addEventListener('input', () => {
     const feedback = document.querySelector(`#${firstNInp.id}Feedback`);
@@ -206,6 +208,9 @@ window.addEventListener('DOMContentLoaded', event => {
   //Form checks state upon every change and toggles submit button
 
   form.addEventListener('input', () => {
+    //Empty submission div in case of starting a new form
+    submitFeedback.innerHTML = '';
+    
     if (firstNVal 
       && lastNVal 
       && emailVal 
@@ -255,5 +260,22 @@ $('#contactForm').on('submit', (event) => {
   });
 
   $('#contactForm')[0].reset();
+  $('#submitBut').prop('disabled', true);
+
+  firstNVal = false;
+  lastNVal = false;
+  emailVal = false;
+  phoneVal = false;
+  subjectVal = false;
+  messageVal = false;
+  checkVal = false;
+  formVal = false;
+
+  $('.feedback').each(function() {
+    console.log('feedback changed');
+    $(this).html('');
+  });
+
+  $('#submitFeedback').html('Thank you for your time sending this message. As we have a daily limit of 300 emails, please wait before contacting again. If you do not hear a reply from me within 5 business days, feel free to directly email me through the information below!');
 });
 

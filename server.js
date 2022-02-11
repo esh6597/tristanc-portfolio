@@ -86,12 +86,12 @@ const sendMail = async (firstName,
 
     }, async function (error) {
       //Error
-      callback(err, null);
+      callback(error, null);
       await db.write();
     });
   } else {
     console.log('Sorry, daily email limit reached.');
-    callback(err, null);
+    callback(error, null);
   }
 }
 
