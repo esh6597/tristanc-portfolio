@@ -31,16 +31,34 @@
     font-family: $body-font-family;
     color:rgba(255, 255, 255, 0.8);
     text-align: left;
-    font-weight: 500;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.3s ease-in-out;
+    
+    &:focus-visible {
+      background-color: rgba(0,0,0,0.5);
+    }
 
     input, textarea {
       font-family: $title-font-alt;
       color: rgba(0,0,0,0.5);
-      margin-bottom: 1rem;
     }
 
-    textarea {
-      margin-bottom: 2rem;
+    .form-label {
+      margin-top: 1rem;
+      font-weight: 580;
+    }
+
+    .feedback {
+      font-size: 80%;
+      margin-top: 0.5rem;
+    }
+
+    .valid {
+      color: $primary-light;
+    }
+
+    .invalid {
+      color: $danger;
     }
   }
 }

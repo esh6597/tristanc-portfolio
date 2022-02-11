@@ -201,19 +201,18 @@ window.addEventListener('DOMContentLoaded', event => {
       feedback.classList.add('invalid');
       feedback.innerHTML = 'To submit your message, you must agree with this statement.';
     }
-    checkVal = checkbox.checked;
   });
 
   //Form checks state upon every change and toggles submit button
 
-  form.addEventListener('change', () => {
+  form.addEventListener('input', () => {
     if (firstNVal 
       && lastNVal 
       && emailVal 
       && phoneVal 
       && subjectVal 
       && messageVal 
-      && checkVal) {
+      && checkbox.checked) {
       submitBut.disabled = false;
     } else {
       submitBut.disabled = true;
