@@ -196,38 +196,38 @@
                                 <div class="col-lg-6">
                                     <label for="firstName" class="form-label">First Name</label>
                                     <input type="text" class="form-control" id="firstName" placeholder="John">
-                                    <div class="feedback"></div>
+                                    <div id="firstNameFeedback" class="feedback"></div>
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="lastName" class="form-label">Last Name</label>
                                     <input type="text" class="form-control" id="lastName" placeholder="Smith">
-                                    <div class="feedback"></div>
+                                    <div id="lastNameFeedback" class="feedback"></div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-8">
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email" placeholder="email@address.com">
-                                    <div class="feedback"></div>
+                                    <div id="emailFeedback" class="feedback"></div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <label for="phone" class="form-label">Phone</label>
+                                    <label for="phone" class="form-label">Phone (US only)</label>
                                     <input type="tel" class="form-control" id="phone" placeholder="123-456-7890">
-                                    <div class="feedback"></div>
+                                    <div id="phoneFeedback" class="feedback"></div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="subject" class="form-label">Subject</label>
                                     <input type="text" class="form-control" id="subject" placeholder="Your subject here...">
-                                    <div class="feedback"></div>
+                                    <div id="subjectFeedback" class="feedback"></div>
                                 </div>
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col">
                                     <label for="message" class="form-label">Message</label>
                                     <textarea class="form-control" id="message" rows="4" placeholder="Your message here..."></textarea>
-                                    <div class="feedback"></div>
+                                    <div id="messageFeedback" class="feedback"></div>
                                 </div>
                             </div>
                             <div class="row justify-content-center">
@@ -241,7 +241,7 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-lg-6 text-center">
-                                    <input class="btn btn-primary" type="submit" value="Submit">
+                                    <input class="btn btn-primary" type="submit" id="submitBut" value="Submit" disabled>
                                 </div>
                             </div>
                         </form>
