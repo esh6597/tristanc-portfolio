@@ -64,7 +64,7 @@
             <img src="images/masthead/md-1920.jpg"
               id="masthead-image"
               srcset="images/masthead/4k-3840.jpg 3840w, images/masthead/md-1920.jpg 1920w, images/masthead/sm-1000.jpg 1000w, images/masthead/xs-500.jpg 500w"
-              sizes="150vw"
+              sizes="125vw"
               alt="Moving cover image of a large tree-like creature reaching out a finger to a deer in the woods."
             />
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-end justify-content-center align-self-center">
@@ -103,7 +103,7 @@
                 </div>
 
                 <!-- Small image highlight: transparent recommended; black bg -->
-                <img class="img-fluid" src="images/demo/ipad.png" alt="..." />
+                <img class="img-fluid" src="images/bs-templ-demo/ipad.png" alt="Placeholder image" />
             </div>
         </section>
 
@@ -123,7 +123,15 @@
                 <div class="row gx-0 featured align-items-center">
 
                     <!-- Featured Image -->
-                    <div class="col-xl-8 col-lg-7 image-featured"><img class="img-fluid mb-3 mb-lg-0" src="images/acturnum.JPG" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7 image-featured">
+                        <img 
+                            class="img-fluid mb-3 mb-lg-0" 
+                            src="images/featured/md-1000.jpg"
+                            srcset="images/featured/xl-2000.jpg 2000w, images/featured/lg-1500.jpg 1500w, images/featured/md-1000.jpg 1000w, images/featured/sm-500.jpg 500w"
+                            sizes="67vw"
+                            alt="Featured project titled Acturnum, an illustration of a mushroom deity wading through a swamp"
+                        />
+                    </div>
                     
                     <div class="col-xl-4 col-lg-5">
 
@@ -139,7 +147,15 @@
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center project-row">
                     
                     <!-- Image -->
-                    <div class="col-lg-6 image"><img class="img-fluid" src="images/placeholder-name.JPG" alt="..." /></div>
+                    <div class="col-lg-6 image">
+                        <img 
+                            class="img-fluid" 
+                            src="images/pr1/md-1000.jpg" 
+                            srcset="images/pr1/xxl-3600.jpg 3600w, images/pr1/xl-2000.jpg 2000w, images/pr1/lg-1500.jpg 1500w, images/pr1/md-1000.jpg 1000w, images/pr1/sm-500.jpg 500w"
+                            sizes="(min-width: 992px) 50vw, 95vw"
+                            alt="Brightly colored illustration of a space warrior posed on a crash-landed ship in an alien, plant-filled scene." 
+                        />
+                    </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -162,7 +178,15 @@
                 <div class="row gx-0 justify-content-center project-row">
 
                     <!-- Image -->
-                    <div class="col-lg-6 image"><img class="img-fluid" src="images/detective-sewers-2.JPG" alt="..." /></div>
+                    <div class="col-lg-6 image">
+                        <img 
+                            class="img-fluid" 
+                            src="images/pr2/md-1000.jpg" 
+                            srcset="images/pr2/xxl-2700.jpg 2700w, images/pr2/xl-2000.jpg 2000w, images/pr2/lg-1500.jpg 1500w, images/pr2/md-1000.jpg 1000w, images/pr2/sm-500.jpg 500w"
+                            sizes="(min-width: 992px) 50vw, 95vw"
+                            alt="A comic sequence of a robot detective approaching a large robot man in a sewer tunnel. The large robot spits out a battery canister from steel jaw, and the detective loads in a new one." 
+                        />
+                    </div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -201,7 +225,7 @@
                                 <div class="col-lg-6">
                                     <label for="firstName" class="form-label">First Name</label>
                                     <input type="text" class="form-control" id="firstName" placeholder="John">
-                                    <div id="firstNameFeedback" class="feedback">Test Feedback</div>
+                                    <div id="firstNameFeedback" class="feedback"> </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="lastName" class="form-label">Last Name</label>
