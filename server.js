@@ -10,10 +10,12 @@ const file = join(__dirname, 'db.json');
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
 
-//Import API key and email recipient
-//Because mailTypes contains sensitive information such as API keys, it is not included in this repository.
-import { key, recipient } from './mail.js';
-// const mailTypes = require('./mail');
+// Set up email information via process variables set in Heroku
+const key = process.env.MAIL_KEY;
+const recipient = {
+  name: process.env.MAIL_NAME,
+  email: process.env.MAIL_EMAIL
+}
 
 //Server via Express
 import express from 'express';
