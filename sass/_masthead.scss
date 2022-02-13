@@ -27,7 +27,7 @@
   #masthead-image {
     position: absolute;
     z-index: -1;
-    transition: transform 3s ease;
+    transition: transform 3s ease-in-out;
     object-fit: cover;
     width: 100vw;
     height: 100vh;

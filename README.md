@@ -33,11 +33,12 @@ These are some other things I've added alongside front end styling:
 - Transactional email API for contacting owner via SendinBlue
 - Email limits to conform to API service standards via LowDB (minor database for cross-user tracking)
 - HTML email formatting to look a bit better
+- Custom form validation for code protection via JS
+- Broke all pictures working on responsive images
 
 #### Features Under Development
 Expect these features to be pushed within the next week:
 
-- Form validation
 - Official deployment
 - Responsive images for mobile and tablet
 

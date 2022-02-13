@@ -11261,7 +11261,7 @@ textarea.form-control-lg {
 .masthead #masthead-image {
   position: absolute;
   z-index: -1;
-  transition: transform 3s ease;
+  transition: transform 3s ease-in-out;
   object-fit: cover;
   width: 100vw;
   height: 100vh;
@@ -11327,7 +11327,7 @@ textarea.form-control-lg {
 .masthead-gallery #masthead-image {
   position: absolute;
   z-index: -1;
-  transition: transform 3s ease;
+  transition: transform 3s ease-in-out;
   object-fit: cover;
   width: 100vw;
   height: 75vh;
