@@ -11127,6 +11127,11 @@ textarea.form-control-lg {
 /*
 ||  MAIN STYLES
 */
+body {
+  margin: 0;
+  background-color: #6c765b;
+}
+
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
@@ -11446,30 +11451,63 @@ textarea.form-control-lg {
 || ABOUT
 */
 .about-section {
+  position: relative;
   padding-top: 10rem;
   height: auto;
-  background: linear-gradient(to bottom, #000 0%, #6c765b 75%, #6c765b 100%);
+  overflow: hidden;
 }
 .about-section .overlay {
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
 }
-.about-section #about-deco, .about-section .overlay {
+.about-section .row {
   position: relative;
-  top: -10rem;
+  padding: 2rem;
+  z-index: 3;
+}
+.about-section .details {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 3rem #000000;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.about-section #about-deco {
+  position: absolute;
+  z-index: -2;
+  top: 0;
   left: 0;
 }
 .about-section h2, .about-section .h2 {
   font-family: "Luxurious Roman", Times New Roman, Georgia, -apple-system, BlinkMacSystemFont, serif;
+  z-index: 200;
+  color: rgba(255, 255, 255, 0.7);
 }
 .about-section p {
   font-family: "IBM Plex Serif";
   font-weight: 300;
-  margin-bottom: 5rem;
+  padding-top: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.about-section .btn {
+  margin-top: 2rem;
 }
 
+@media (min-width: 992px) {
+  .about-section h2, .about-section .h2 {
+    padding-top: 0rem;
+  }
+  .about-section .details {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
 /*
 || PROJECTS
 */
