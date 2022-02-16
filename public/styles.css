@@ -11573,6 +11573,15 @@ body {
 .projects-section .project-text p {
   font-family: "IBM Plex Serif";
 }
+.projects-section .gallery-link {
+  padding-top: 5rem;
+  font-family: "IBM Plex Serif";
+  color: rgba(255, 255, 255, 0.7);
+}
+.projects-section .gallery-link a {
+  text-decoration: none;
+  font-weight: 600;
+}
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
