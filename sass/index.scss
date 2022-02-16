@@ -1,0 +1,45 @@
+/*
+Search for || to navigate between sections.
+*/
+
+//|| OVERRIDE BOOTSTRAP VARIABLES
+
+@import 'variables';
+
+/*
+|| BOOTSTRAP
+*/
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/*
+||  MAIN STYLES
+*/
+
+body {
+  margin: 0;
+  background-color: $primary;
+}
+
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-family: $body-font-family;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.footer {
+  padding: 5rem 0;
+  font-family: $body-font-family;
+}
+
+
+// || IMPORT PARTIALS
+
+@import 'navigation';
+@import 'masthead';
+@import 'about';
+@import 'projects';
+@import 'contact';
