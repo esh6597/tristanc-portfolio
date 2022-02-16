@@ -11216,7 +11216,7 @@ body {
   }
 
   /*
-  || SCROLL CHANGE EFFECT
+  || SCROLL CHANGE EFFECT: turns opaque once these classes are added by ScrollSpy
   */
   #mainNav.navbar-shrink {
     background-color: #000;
@@ -11242,7 +11242,7 @@ body {
   }
 }
 /*
-|| MASTHEAD
+|| MASTHEAD: HOMEPAGE
 */
 .masthead {
   position: relative;
@@ -11369,7 +11369,7 @@ body {
   }
 }
 /*
-|| PROJECTS
+|| PROJECTS: NOT GALLERY
 */
 .projects-section {
   padding-bottom: 10rem;

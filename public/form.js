@@ -20,10 +20,10 @@ window.addEventListener('DOMContentLoaded', event => {
   const messageInp = document.querySelector('#message');
   const checkbox = document.querySelector('#privacyCheck');
   const submitBut = document.querySelector('#submitBut');
-
-  //Disable submission automatically and erase any messages
-  submitBut.disabled = true;
   const submitFeedback = document.querySelector('#submitFeedback');
+
+  //Disable submission automatically
+  submitBut.disabled = true;
 
   // VALIDATOR FX'S--reuseable
   // HTML has its own validation API, but custom JS validation offers better freedom and code organization. To allow special characters in names, we will not be validating names beyond the no angle bracket rule.
@@ -97,12 +97,10 @@ window.addEventListener('DOMContentLoaded', event => {
     if (notEmpty(lastNInp.value) && noAngleBr(lastNInp.value)) {
       //Does nothing if class doesn't exist
       feedback.classList.remove('invalid');
-      //Add custom styling
       feedback.classList.add('valid');
       feedback.innerHTML = 'Looks good!';
       lastNVal = true;
     } else {
-      //Not valid
       feedback.classList.remove('valid');
       feedback.classList.add('invalid');
       feedback.innerHTML = 'Please enter a valid name.';
@@ -115,14 +113,11 @@ window.addEventListener('DOMContentLoaded', event => {
     
     // Validate: required, is a valid email
     if (notEmpty(emailInp.value) && validEmail(emailInp.value)) {
-      //Does nothing if class doesn't exist
       feedback.classList.remove('invalid');
-      //Add custom styling
       feedback.classList.add('valid');
       feedback.innerHTML = 'Looks good!';
       emailVal = true;
     } else {
-      //Not valid
       feedback.classList.remove('valid');
       feedback.classList.add('invalid');
       feedback.innerHTML = 'Please enter a valid email.';
@@ -135,14 +130,11 @@ window.addEventListener('DOMContentLoaded', event => {
     
     // Validate: is a valid phone format
     if (validPhone(phoneInp.value)) {
-      //Does nothing if class doesn't exist
       feedback.classList.remove('invalid');
-      //Add custom styling
       feedback.classList.add('valid');
       feedback.innerHTML = 'Looks good!';
       phoneVal = true;
     } else {
-      //Not valid
       feedback.classList.remove('valid');
       feedback.classList.add('invalid');
       feedback.innerHTML = 'Oops, please enter a valid phone number.';
@@ -155,14 +147,11 @@ window.addEventListener('DOMContentLoaded', event => {
     
     // Validate: is a valid phone format
     if (notEmpty(subjectInp.value) && validSubject(subjectInp.value) && noAngleBr(subjectInp.value)) {
-      //Does nothing if class doesn't exist
       feedback.classList.remove('invalid');
-      //Add custom styling
       feedback.classList.add('valid');
       feedback.innerHTML = 'Looks good!';
       subjectVal = true;
     } else {
-      //Not valid
       feedback.classList.remove('valid');
       feedback.classList.add('invalid');
       feedback.innerHTML = 'Oops, please keep your subject under 160 characters.';
@@ -175,14 +164,11 @@ window.addEventListener('DOMContentLoaded', event => {
     
     // Validate: is a valid phone format
     if (notEmpty(messageInp.value) && validMessage(messageInp.value) && noAngleBr(messageInp.value)) {
-      //Does nothing if class doesn't exist
       feedback.classList.remove('invalid');
-      //Add custom styling
       feedback.classList.add('valid');
       feedback.innerHTML = 'Looks good!';
       messageVal = true;
     } else {
-      //Not valid
       feedback.classList.remove('valid');
       feedback.classList.add('invalid');
       feedback.innerHTML = 'Oops, please enter a message under 10000 characters. For security reasons, angle brackets (\< and \>) are not allowed.';
@@ -194,19 +180,17 @@ window.addEventListener('DOMContentLoaded', event => {
     const feedback = document.querySelector(`#${checkbox.id}Feedback`);
     if (checkbox.checked) {
       feedback.classList.remove('invalid');
-      //Add custom styling
       feedback.classList.add('valid');
       feedback.innerHTML = 'Thank you for protecting both of our privacies.';
     } else {
-      //Not valid
       feedback.classList.remove('valid');
       feedback.classList.add('invalid');
       feedback.innerHTML = 'To submit your message, you must agree with this statement.';
     }
   });
 
-  //Form checks state upon every change and toggles submit button
 
+  //Form checks state upon every change and toggles submit button
   form.addEventListener('input', () => {
     //Empty submission div in case of starting a new form
     submitFeedback.innerHTML = '';
@@ -226,17 +210,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-// add change event listener to fields
-  // validate field
-  // get feedback div
-  // if valid update classes and inner html
-  // if invalid do the same but different :^)
 
 // || FORM SUBMISSION
 
 $('#contactForm').on('submit', (event) => {
   event.preventDefault();
 
+  //Get form values
   const firstName = $('#firstName').val().trim();
   const lastName = $('#lastName').val().trim();
   const email = $('#email').val().trim();
@@ -253,12 +233,10 @@ $('#contactForm').on('submit', (event) => {
       message
   };
 
-  console.log(`Thanks for your submission! Here's what you wrote: ${firstName} ${lastName}, ${email}, ${phone}, Subject: ${subject}, Message: ${message}`);    
+  //Post to server
+  $.post('/email', data, function() {});
 
-  $.post('/email', data, function() {
-      console.log('Data sent to server!');
-  });
-
+  //Reset and disable submission button and state values so form must be completed to re-enable
   $('#contactForm')[0].reset();
   $('#submitBut').prop('disabled', true);
 
@@ -271,11 +249,12 @@ $('#contactForm').on('submit', (event) => {
   checkVal = false;
   formVal = false;
 
+  //Reset feedback
   $('.feedback').each(function() {
-    console.log('feedback changed');
     $(this).html('');
   });
 
+  //Submission feedback
   $('#submitFeedback').html('Thank you for your time sending this message. As we have a daily limit of 300 emails, please wait before contacting again. If you do not hear a reply from me within 5 business days, feel free to directly email me through the information below!');
 });
 

@@ -19,30 +19,23 @@ While there's no 7-1 structure for the Sass files in this project, the modules a
 - Express for static server
 - NodeMailer and SendinBlue's v3 API for email functionality
 
-#### Changes to Template
-Despite using a template for fast workflow, many major changes were made for client needs. Here are those changes (not including back end functionality):
-
-- Bootstrap's default Sass variables for color schemes/using Sass in general instead of template's default CSS stylesheet
-- Style organization via modules
-- Extra gallery page with dynamic carousel zoom overlay
-- Custom card styles and sections
-- Masthead animations on page load and hover
-- Custom fonts
-
 #### Additional Features
-These are some other things I've added alongside front end styling:
+Despite using a template for fast workflow, many major changes were made for client needs. These are some other things I've added alongside front end styling:
 
+- Extra gallery page with dynamic carousel zoom overlay
+- Custom card styles and sections (not always Bootstrap card classes)
+- Masthead animations on page load and hover + other custom animations
+- Custom fonts
 - Transactional email API for contacting owner via SendinBlue
 - Email limits to conform to API service standards via LowDB (minor database for cross-user tracking)
 - HTML email formatting to look a bit better
 - Custom form validation for code protection via JS
-- Add responsive images
-- Test deployment via Heroku and IONOS
+- Add responsive images and styling that's tested to look good on all sizes
+- Deployment via Heroku and IONOS
+- Sass modules for style/compilation organization and variables to override Bootstrap defaults
 
 #### Features Under Development
-Expect these features to be pushed within the next week:
-
-- Responsive images for mobile and tablet
+This website is currently officially complete and deployed. If you have any suggestions for improvements, please let me know!
 
 # Licenses and Copyright
 

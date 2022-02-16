@@ -11,6 +11,7 @@
     }
   }
 
+  //Smooth transition for fade in upon page load
   .opacity-in {
     opacity: 0;
     transition: opacity 1s ease-in-out;

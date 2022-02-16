@@ -31,6 +31,7 @@
     border-radius: 1rem;
   }
 
+  //Decorative image
   #about-deco {
     position: absolute;
     z-index: -2;
@@ -56,6 +57,7 @@
   }
 }
 
+//Removes background when larger size
 @media (min-width: 992px) {
   .about-section {
     h2, .h2 {

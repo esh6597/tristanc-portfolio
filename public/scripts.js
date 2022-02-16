@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    // Add Bootstrap ScrollSpy
+    // Add Bootstrap ScrollSpy for navbar functionality
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {

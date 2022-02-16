@@ -2,10 +2,9 @@
 import { join, dirname } from 'path';
 import { Low, JSONFile } from 'lowdb';
 
+//Use JSON file for storage
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-//Use JSON file for storage
 const file = join(__dirname, 'db.json');
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
@@ -17,23 +16,20 @@ const recipient = {
   email: process.env.MAIL_EMAIL
 }
 
-//Server via Express
-import express from 'express';
-// const express = require('express');
-
 //Define app
+import express from 'express';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 //Define + config mailing capabilities
 import mailService from 'sib-api-v3-sdk';
-// const mailService = require('sib-api-v3-sdk');
 
 let defaultClient = mailService.ApiClient.instance;
 let apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = key;
 
 let apiInstance = new mailService.TransactionalEmailsApi();
+
 
 //Define mail protocol
 const sendMail = async (firstName, 

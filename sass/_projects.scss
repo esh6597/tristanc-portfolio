@@ -1,5 +1,5 @@
 /*
-|| PROJECTS
+|| PROJECTS: NOT GALLERY
 */
 
 .projects-section {
@@ -7,6 +7,7 @@
   background-color: $dark;
   box-shadow: inset 0px 0px 3rem 0 rgba(0, 0, 0, 1) !important;
 
+  //First featured project
   .featured {
     margin-bottom: 10rem;
   }
@@ -61,6 +62,7 @@
     }
   }
 
+  //2 rows of featured projects afterward
   .project-row {
     box-shadow: 0px 0px 2.5rem 0 rgba(0, 0, 0, 1) !important;
   }
