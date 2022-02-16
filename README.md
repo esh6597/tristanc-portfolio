@@ -1,5 +1,7 @@
 # About
 
+UPDATE: This site is now live! Visit [www.tristan-carmichael.com](http://www.tristan-carmichael.com) to view the site! Please do not use its email form unless you're officially conducting business with my client.
+
 This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites. Still a work in progress, but I wanted to show some code I've been using for freelance purposes. Special thanks to Tristan Carmichael for being supportive in the work on his project.
 
 #### General Workflow
@@ -34,12 +36,12 @@ These are some other things I've added alongside front end styling:
 - Email limits to conform to API service standards via LowDB (minor database for cross-user tracking)
 - HTML email formatting to look a bit better
 - Custom form validation for code protection via JS
-- Broke all pictures working on responsive images
+- Add responsive images
+- Test deployment via Heroku and IONOS
 
 #### Features Under Development
 Expect these features to be pushed within the next week:
 
-- Official deployment
 - Responsive images for mobile and tablet
 
 # Licenses and Copyright
