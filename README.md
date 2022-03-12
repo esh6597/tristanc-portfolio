@@ -2,7 +2,7 @@
 
 UPDATE: This site is now live! Visit [www.tristan-carmichael.com](http://www.tristan-carmichael.com) to view the site! Please do not use its email form unless you're officially conducting business with my client.
 
-This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites. Still a work in progress, but I wanted to show some code I've been using for freelance purposes. Special thanks to Tristan Carmichael for being supportive in the work on his project.
+This website was made for a client who agreed to show its code for demonstration purposes. It's a quick setup to deploy full static websites. Special thanks to Tristan Carmichael for being supportive in the work on his project.
 
 #### General Workflow
 - Scaffold Express file structure and add dependencies
